@@ -1,0 +1,33 @@
+
+body {
+	background-color: silver;
+	font-family: 'Permanent Marker', cursive;
+	color: white;
+}
+
+.ttt-board {
+    height: 300px;
+    width: 300px;
+    margin: 10px auto;
+}
+
+.ttt-square {
+    border: 1px solid white;
+    background-color: black;
+    display: inline-block;
+    float: left;
+    font-size: 80px;
+    height: 92px;
+    width: 92px;
+    text-align: center;
+    line-height: 92px;
+    border-radius: 40px;
+    margin: 2px;
+}
+
+
+section {
+	text-align: center;
+
+}
+
