@@ -14,6 +14,8 @@
 		<link rel="stylesheet" href="css/style.css">
 		
 		<script src="js/angular.js"></script>
+		<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/TTTBoard.js"></script>
@@ -22,28 +24,39 @@
 		<script src="js/GameManager.js"></script>
 	</head>
 
-	<body ng-app="TTTApp">
+	<body ng-app="TTTApp" ng-cloak>
 		
 
-		<section ng-controller="ticTacToeCtrl">
+		<section ng-controller="TTTController as game">
 
 
 			<h1>Just Win, Baby!</h1>
 
-			<h2>{{ greeting }}</h2>
-			<h3>{{ players.player1 }}</h3>
+			<h2>{{ game.greeting }}</h2>
+
+
+
+			<form>
+				<input class="text-box" type="text" placeholder="Name here..." ng-model="game.text" ng-submit="game.playerName(game.text)">
+			</form>
+
+
+
+
+			<h2>{{ game.winner }}</h2>
 
     		<div class="ttt-board">
 
         		<div class="ttt-square"
-        				ng-repeat="i in board track by $index"
-        				ng-click="place($index)"
-        				ng-bind="board[$index]">
+        				ng-repeat="i in game.board track by $index"
+        				ng-click="game.place($index)"
+        				ng-bind="game.board[$index]">
         		</div>
     			
     		</div>
 
-    		<button ng-click="reset()">New Game</button>
+    		<button ng-click="game.newGame()">{{ game.button }}</button>
+    		<button ng-click="game.lobby.$add()">Test</button>
 
 		</section>
 

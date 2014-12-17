@@ -4,4 +4,4 @@ angular
 
 	function PlayerManager(){
 
-	}
+	};

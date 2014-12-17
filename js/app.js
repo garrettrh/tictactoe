@@ -1,5 +1,5 @@
 angular
-	.module('TTTApp', ['ui.router'])
+	.module('TTTApp', ['firebase', 'ui.router'])
 	.config(MainRouter);
 
 	// function MainRouter($stateProvider, $urlRouterProvider){
