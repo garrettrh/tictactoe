@@ -40,9 +40,9 @@ angular
         self.board = new Array(9);
         turn = 0;
 
-        // Change greetings/winner announcement
-        // Make board fade in
-        // Change button greeting/info "Start Game/Play Again"
+        // To Do: Change greetings/winner announcement
+        // To Do: Make board fade in
+        // To Do: Change button greeting/info "Start Game/Play Again"
         self.greeting = "Tic Tac Go!";
     };
 
@@ -63,7 +63,7 @@ angular
     }
     };
 
-    // calls the reset function to empty the boxes and restart the game
+    // calls the reset function to empty the boxes and restart the game, erase win notification
     self.reset = function(){
         console.log("reset runs");
     	self.greeting = "Play Again!";

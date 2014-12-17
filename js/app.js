@@ -2,6 +2,8 @@ angular
 	.module('TTTApp', ['firebase', 'ui.router'])
 	.config(MainRouter);
 
+	// To Do: Finish routing
+	
 	// function MainRouter($stateProvider, $urlRouterProvider){
 
 	// 	$stateProvider
